@@ -68,7 +68,7 @@ export class Cart {
     const $products = get(this.products);
     let totalCost = 0.00;
     $products.forEach((item) => {
-      totalCost += item.price;
+      totalCost += item.price * item.amount;
     });
 
     return totalCost;
